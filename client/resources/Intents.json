@@ -1,0 +1,73 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Xin chào",
+        "Chào buổi sáng",
+        "Chào buổi tối",
+        "Xin chào IUConsultant",
+        "Chào",
+        "Này bạn ơi",
+        "Mình cần tìm kiếm thông tin về trường",
+        "Mình muốn hỏi bạn một số thông tin về trường",
+        "Này",
+        "Tôi cần thông tin",
+        "Tui đang kiếm thông tin",
+        "Xin chào bot",
+        "Hello IUConsultant",
+        "Hi IUConsultant",
+        "Mình có thông thắc mắc cần được giải đáp.",
+        "Cho mình hỏi cái này được không?"
+      ],
+      "responses": [
+        "Xin chào, mình là trợ lý ảo IUConsultant. Nhiệm vụ của mình là giải đáp các thắc mắc của sinh viên về Trường Đại học Quốc tế - ĐHQG TPHCM. Bạn cần thông tin gì nào?"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Cảm ơn bạn nhiều",
+        "Cảm ơn",
+        "Then kiu nhiều",
+        "Xin cảm ơn",
+        "Thanks",
+        "Thank you",
+        "Cảm ơn rất nhiều",
+        "Rất cảm ơn",
+        "Cảm ơn bạn nha",
+        "Cảm ơn IUConsultant"
+      ],
+      "responses": [
+        "Hong có gì nha. Chúc bạn một ngày vui vẻ,",
+        "Không có gì nè.",
+        "You are welcome <3",
+        "Không có gì. Chúc bạn một ngày làm việc hiệu quả."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bái bai",
+        "Tạm biệt",
+        "Tạm biệt nha",
+        "Goodbye",
+        "Hẹn gặp lại",
+        "See ya",
+        "See you later",
+        "Hẹn gặp lần sau",
+        "Bye"
+      ],
+      "responses": [
+        "Tạm biệt.",
+        "Hẹn gặp lại.",
+        "Nếu như còn thắc mắc gì thì bạn đừng ngần ngại quay lại nha",
+        "Tạm biệt, chúc bạn một ngày làm việc hiệu quả",
+        "Tạm biệt, hẹn gặp lại vào dịp sau",
+        "Good bye. Have a nice day <3"
+      ]
+    }
+  ]
+}
