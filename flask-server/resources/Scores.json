@@ -1,0 +1,162 @@
+[{
+  "_id": {
+    "$oid": "66c588a4458cae1b98ca60dd"
+  },
+  "major": {
+    "Ngôn ngữ Anh": {
+      "method1": 25,
+      "method2": 28,
+      "method3": 835,
+      "method4": {
+        "CTLK với ĐH West of England (2+2)": 22,
+        "CTLK với ĐH West of England (3+1)": 22,
+        "CTLK với ĐH West of England (4+0)": 22
+      }
+    },
+    "Quản trị Kinh doanh": {
+      "method1": 25,
+      "method2": 28,
+      "method3": 835,
+      "method4": {
+        "CTLK với ĐH Công nghệ Auckland (2+2)": 23,
+        "CTLK với ĐH Lakehead (Canada) (2+2)": 23,
+        "CTLK với ĐH New South Wales (2+2)": 23,
+        "CTLK với ĐH Sydney (Úc) (2+2)": 23,
+        "CTLK với ĐH Houston (2+2)": 23,
+        "CTLK với ĐH Nottingham (2+2)": 23,
+        "CTLK với ĐH West of England (2+2)": 23,
+        "CTLK với ĐH West of England (4+0)": 23,
+        "CTLK với ĐH Andrews (4+0)": 23
+      }
+    },
+    "Tài chính - Ngân hàng": {
+      "method1": 23,
+      "method2": 27,
+      "method3": 790
+    },
+    "Kế toán": {
+      "method1": 23,
+      "method2": 25.5,
+      "method3": 760
+    },
+    "Kinh tế (Phân tích dữ liệu trong kinh tế)": {
+      "method1": 23.25,
+      "method2": 27,
+      "method3": 770
+    },
+    "Công nghệ Sinh học": {
+      "method1": 20,
+      "method2": 25,
+      "method3": 700,
+      "method4": {
+        "CTLK với ĐH Nottingham (2+2)": 22,
+        "CTLK với ĐH West of England (2+2)": 22,
+        "CTLK với ĐH West of England (4+0)": 22
+      }
+    },
+    "Hoá sinh": {
+      "method1": 19,
+      "method2": 25,
+      "method3": 700
+    },
+    "Công nghệ Thực phẩm:": {
+      "method1": 19,
+      "method2": 24,
+      "method3": 700,
+      "method4": {
+        "CTLK với ĐH Nottingham (2+2)": 22
+      }
+    },
+    "Kỹ thuật hóa học": {
+      "method1": 20,
+      "method2": 26,
+      "method3": 710
+    },
+    "Công nghệ Thông tin": {
+      "method1": 25,
+      "method2": 27.5,
+      "method3": 850,
+      "method4": {
+        "CTLK với ĐH Deakin (2+2)": 25,
+        "CTLK với ĐH Deakin (2.5+1.5)": 25,
+        "CTLK với ĐH Deakin (3+1)": 25,
+        "CTLK với ĐH Nottingham (2+2)": 25,
+        "CTLK với ĐH West of England (2+2)": 25,
+        "CTLK với ĐH West of England (4+0)": 25
+      }
+    },
+    "Khoa học dữ liệu": {
+      "method1": 25,
+      "method2": 27.5,
+      "method3": 850
+    },
+    "Khoa học máy tính": {
+      "method1": 25,
+      "method2": 27.5,
+      "method3": 850
+    },
+    "Kỹ thuật Điều khiển & Tự động hoá": {
+      "method1": 21,
+      "method2": 24,
+      "method3": 700
+    },
+    "Kỹ thuật Điện tử - Viễn thông": {
+      "method1": 21,
+      "method2": 24,
+      "method3": 700,
+      "method4": {
+        "CTLK với ĐH Suny Binghamton (2+2)": 22,
+        "CTLK với ĐH Nottingham (2+2)": 22,
+        "CTLK với ĐH West of England (2+2)": 22
+      }
+    },
+    "Logistics & Quản lý chuỗi cung ứng": {
+      "method1": 25.25,
+      "method2": 28,
+      "method3": 870
+    },
+    "Kỹ thuật Hệ thống Công nghiệp:": {
+      "method1": 19,
+      "method2": 22,
+      "method3": 630,
+      "method4": {
+        "CTLK với ĐH Suny Binghamton (2+2)": 24
+      }
+    },
+    "Kỹ thuật Y sinh": {
+      "method1": 22,
+      "method2": 24,
+      "method3": 700
+    },
+    "Kỹ Thuật Xây dựng": {
+      "method1": 18,
+      "method2": 21,
+      "method3": 670
+    },
+    "Quản lý xây dựng": {
+      "method1": 18,
+      "method2": 21,
+      "method3": 630
+    },
+    "Toán ứng dụng (Kỹ thuật Tài chính & Quản trị rủi ro)": {
+      "method1": 19,
+      "method2": 24,
+      "method3": 720
+    },
+    "Thống kê (Thống kê ứng dụng)": {
+      "method1": 18,
+      "method2": 23,
+      "method3": 700
+    },
+    "Kỹ Thuật Không Gian": {
+      "method1": 21,
+      "method2": 22,
+      "method3": 660
+    },
+    "Kỹ Thuật Môi Trường": {
+      "method1": 18,
+      "method2": 24,
+      "method3": 620
+    }
+  }
+}]

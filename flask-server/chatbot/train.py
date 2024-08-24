@@ -6,8 +6,11 @@ from torch.utils.data import Dataset, DataLoader
 from nltk_utils import bag_of_words, stem, vietnamese_tokenizer
 from model import NeuralNet
 
-with open('client/resources/Intents.json', 'r') as f:
+with open('flask-server/resources/Intents.json', 'r') as f:
   intents = json.load(f)
+with open('flask-server/resources/Questions.json', 'r') as f:
+  questions_data = json.load(f)
+
 
 all_words = []
 tags = []
@@ -19,7 +22,21 @@ for intent in intents['intents']:
     w = vietnamese_tokenizer(pattern)
     all_words.extend(w)
     xy.append((w,tag))
-
+for question_set in questions_data['questions']:
+  tag = question_set['tag']
+  tags.append(tag)
+  for question_answer in question_set['questions_and_answers']:
+    if isinstance(question_answer['question'], list):
+      for question in question_answer['question']:
+        w = vietnamese_tokenizer(question)
+        all_words.extend(w)
+        xy.append((w, tag))
+    else:
+      question = question_answer['question']
+      w = vietnamese_tokenizer(question)
+      all_words.extend(w)
+      xy.append((w, tag))
+      
 ignore_words = ['?', '.', ',', '❤']
 all_words = [stem(w) for w in all_words if w not in ignore_words]
 all_words = sorted(set(all_words)) 
