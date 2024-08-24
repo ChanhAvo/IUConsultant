@@ -9,7 +9,7 @@ tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='/Users/dangmai/Desktop/IUConsultant/client/src')
 
 @app.route("/")
 def index():
