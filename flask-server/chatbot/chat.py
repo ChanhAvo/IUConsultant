@@ -1,8 +1,8 @@
 import random
-import json 
-import torch 
+import json
+import torch
 import re
-from model import NeuralNet 
+from model import NeuralNet
 from nltk_utils import vietnamese_tokenizer, bag_of_words
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -11,7 +11,7 @@ with open('flask-server/resources/Intents.json', 'r') as f:
     intents = json.load(f)
 with open('flask-server/resources/Questions.json', 'r') as f:
     questions = json.load(f)
-    
+
 all_questions = []
 for intent in intents['intents']:
     all_questions.extend(intent['patterns'])
@@ -38,19 +38,37 @@ model.eval()
 bot_name = "IU Consultant"
 print("Bắt đầu cuộc trò chuyện. Nếu như bạn chưa muốn bắt đầu, hãy type 'Tôi không muốn trò chuyện' để thoát cuộc trò chuyện")
 
-while True:
-    sentence = input('Bạn: ')
-    if sentence == "Tôi không muốn trò chuyện":
-        break 
+def get_score(major, method):
+    with open('flask-server/resources/Scores.json', 'r') as f:
+        data = json.load(f)
+
+    method_key = f"method{method}"
+    if major not in data['major']:
+        return f"Không tìm thấy ngành {major}"
+    
+    major_data = data['major'][major]
+
+    if method_key in major_data:
+        return major_data[method_key]
+    elif 'method4' in major_data:
+        for key in major_data['method4']:
+            if method_key in key.lower():
+                return major_data['method4'][key]
+        return "Không tìm thấy phương thức xét tuyển phù hợp trong method4"
+    else:
+        return "Không tìm thấy phương thức xét tuyển"
+
+
+def process_chatbot_response(sentence, model, all_words, tags, device, questions, intents, get_score, bot_name):
     sentence_tokenized = vietnamese_tokenizer(sentence)
     X = bag_of_words(sentence_tokenized, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
-    
+
     output = model(X)
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
-    
+
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
@@ -60,24 +78,45 @@ while True:
             for q_a in question_tag['questions_and_answers']:
                 if isinstance(q_a['question'], list):
                     for pattern in q_a['question']:
-                        if re.search(pattern, sentence):
-                            answer = q_a['answer']
-                            print(f"{bot_name}: {answer}")
+                        match = re.search(pattern, sentence, re.IGNORECASE)
+                        if match:
+                            response = generate_response(q_a['answer'], match, get_score)
+                            print(f"{bot_name}: {response}")
                             matched = True
                             break
                 else:
-                    if re.search(q_a['question'], sentence):
-                        answer = q_a['answer']
-                        print(f"{bot_name}: {answer}")
+                    match = re.search(q_a['question'], sentence, re.IGNORECASE)
+                    if match:
+                        response = generate_response(q_a['answer'], match, get_score)
+                        print(f"{bot_name}: {response}")
                         matched = True
                         break
             if matched:
                 break
-                
+
         if not matched:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     print(f"{bot_name}: {random.choice(intent['responses'])}")
-                    break  
+                    break
     else:
         print(f"{bot_name}: Mình chưa hiểu ý của bạn...")
+
+def generate_response(answer_template, match, get_score):
+    if "{major}" in answer_template and "{method}" in answer_template:
+        major = match.group(1)
+        method = match.group(2)
+        score = get_score(major.strip(), method.strip())
+        response = answer_template.replace("{major}", major).replace("{method}", method).replace("{score}", str(score))
+    else:
+        response = answer_template
+        for i in range(1, len(match.groups()) + 1):
+            response = re.sub(r"\(\.\+\?\)", match.group(i), response, 1)
+    return response
+
+while True:
+    sentence = input('Bạn: ')
+    if sentence == "Tôi không muốn trò chuyện":
+        break
+    process_chatbot_response(sentence, model, all_words, tags, device, questions, intents, get_score, bot_name)
+

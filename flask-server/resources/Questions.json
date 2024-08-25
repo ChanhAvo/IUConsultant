@@ -70,17 +70,17 @@
         {
           "question": [
             "Ngành (.+?) năm 2023 lấy bao nhiêu điểm?",
-            "Mình muốn vào ngành (.+) thì cần bao nhiêu điểm?",
+            "Mình muốn vào ngành (.+?) thì cần bao nhiêu điểm?",
             "Điểm chuẩn của ngành (.+?) là bao nhiêu trong năm 2023?"
           ],
           "answer": "Điểm của ngành (.+?) sẽ khác nhau theo từng phương thức. Bạn muốn hỏi cụ thể điểm của ngành này của phương thức nào?"
         },
         {
           "question": [
-            "Mình muốn biết điểm chuẩn của ngành (.+?) theo phương thức (.{2}) trong năm 2023",
-            "Ngành (.+?) theo phương thức (.{2}) là bao nhiêu điểm trong năm 2023?"
+            "Mình muốn biết điểm chuẩn của ngành (.+?) theo phương thức (.+?) trong năm 2023",
+            "Ngành (.+?) theo phương thức (.+?) là bao nhiêu điểm trong năm 2023?"
           ],
-          "answer": "Điểm chuẩn ngành {nganh} theo phương thức {phuong_thuc} là {diem_chuan} trong năm 2023."
+          "answer": "Điểm chuẩn ngành {major} theo phương thức {method} là {score} trong năm 2023."
         }
       ]
     },
