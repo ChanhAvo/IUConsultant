@@ -21,7 +21,7 @@
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://i.ibb.co/7NMJtD1/logo.png" class="rounded-circle user_img">
+									<img src="https://i.ibb.co/BVQhZ7q/logo.png" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -56,7 +56,7 @@
 					const str_time = hour+":"+minute;
 					var rawText = $("#text").val();
 
-					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/qWc8XgZ/student.png" class="rounded-circle user_img_msg"></div></div>';
+					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/4VZr19w/student-1.png" class="rounded-circle user_img_msg"></div></div>';
 					
 					$("#text").val("");
 					$("#messageFormeight").append(userHtml);
@@ -68,7 +68,7 @@
 						type: "POST",
 						url: "/get",
 					}).done(function(data) {
-						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><<img src="https://i.ibb.co/7NMJtD1/logo.png" alt="logo" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
+						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><<img src="https://i.ibb.co/BVQhZ7q/logo.png" alt="logo" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
 						$("#messageFormeight").append($.parseHTML(botHtml));
 					});
 					event.preventDefault();
