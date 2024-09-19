@@ -7,9 +7,9 @@ from nltk_utils import vietnamese_tokenizer, bag_of_words
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('flask-server/resources/Intents.json', 'r') as f:
+with open('../resources/Intents.json', 'r') as f:
     intents = json.load(f)
-with open('flask-server/resources/Questions.json', 'r') as f:
+with open('../resources/Questions.json', 'r') as f:
     questions = json.load(f)
 
 all_questions = []
@@ -39,7 +39,7 @@ bot_name = "IU Consultant"
 print("Bắt đầu cuộc trò chuyện. Nếu như bạn chưa muốn bắt đầu, hãy type 'Tôi không muốn trò chuyện' để thoát cuộc trò chuyện")
 
 def get_score(major, method):
-    with open('flask-server/resources/Scores.json', 'r') as f:
+    with open('../resources/Scores.json', 'r') as f:
         data = json.load(f)
 
     method_key = f"method{method}"

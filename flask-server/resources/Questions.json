@@ -120,6 +120,67 @@
           "answer": "Có"
         }
       ]
+    },
+    {
+      "tag": "Học tập",
+      "questions_and_answers": [
+        {
+          "question": "Mình đang học chương trình tiếng Anh IE thì mình có được học các môn khác không?",
+          "answer": "Đối với trình độ tiếng Anh IE0 và IE1, sinh viên sẽ KHÔNG học các môn đại cương mà chỉ học tiếng Anh. \nĐối với trình độ tiếng Anh IE2 và IE3, sinh viên sẽ học chương trình tiếng Anh cùng với một vài môn đại cương. \nSinh viên sẽ được học các môn đại cương và chuyên ngành cùng lúc với tiếng Anh chuyên ngành (AE)."
+        },
+        {
+          "question": "Một tiết học kéo dài bao nhiêu phút? ",
+          "answer": "Một tiết học tại trường sẽ kéo dài 50 phút."
+        },
+        {
+          "question": "Một ngày có bao nhiêu tiết học?",
+          "answer": "Một ngày học bao gồm 12 tiết học."
+        },
+        {
+          "question": "Tiết học đầu tiên bắt đầu vào lúc mấy giờ?",
+          "answer": "Tiết học đầu tiên bắt đầu vào 8h00 sáng."
+        },
+        {
+          "question": "Làm sao để đăng ký môn học?",
+          "answer": "Trước ngày đăng ký môn học chính thức, trường sẽ đưa ra thông báo về thời gian cụ thể để đăng ký môn học cho từng khoá. Sinh viên cần cập nhật thông tin và chuẩn bị đầy đủ thiết bị để đăng ký môn học thuận lợi. \nLưu ý: Sinh viên năm nhất sẽ không được đăng ký môn học."
+        },
+        {
+          "question": "Khoá nào sẽ được phép đăng ký môn học? ",
+          "answer": "Sinh viên năm thứ hai trở đi sẽ được phép đăng ký môn học. Sinh viên năm thứ nhất sẽ học theo thời khoá biểu do trường sắp xếp."
+        },
+        {
+          "question": "Học kì hè của trường có bắt buộc hay không? ",
+          "answer": "Đối với sinh viên năm nhất, trường sẽ sắp xếp thời khoá biểu cho sinh viên nên học kì hè gần như là bắt buộc. Sinh viên có thể xin miễn học kì hè thông qua Phòng Đào tạo Đại học của trường. \nĐối với sinh viên năm hai trở đi, sinh viên có thể lựa chọn học kì hè hay không thông qua đăng kí môn học."
+        },
+        {
+          "question": "Khi nào thì sinh viên sẽ đi học quân sự?",
+          "answer": "Kì học quân sự thường diễn ra vào học kì hè của năm thứ nhất hoặc năm thứ hai và sẽ được sắp xếp khác nhau theo từng khoá. Sinh viên có thể truy cập vào trang web https://edusoftweb.hcmiu.edu.vn/ để cập nhật những thông báo mới nhất và theo dõi ACADEMIC CALENDAR để biết thêm thông tin chi tiết."
+        },
+        {
+          "question": "Học kì quân sự sẽ kéo dài trong bao lâu?",
+          "answer": "Kì học quân sự sẽ kéo dài trong vòng 1 tháng."
+        },
+        {
+          "question": "Khi nào thì sinh viên sẽ đi học quân sự?",
+          "answer": "Kì học quân sự thường diễn ra vào học kì hè của năm thứ nhất hoặc năm thứ hai và sẽ được sắp xếp khác nhau theo từng khoá. Sinh viên có thể truy cập vào trang web https://edusoftweb.hcmiu.edu.vn/ để cập nhật những thông báo mới nhất và theo dõi ACADEMIC CALENDAR để biết thêm thông tin chi tiết."
+        },
+        {
+          "question": "Chương trình đào tạo toàn bộ bằng Tiếng Anh ở trường có gây khó khăn cho người yếu Tiếng Anh hay không?",
+          "answer": "Sinh viên sẽ được đánh giá trình độ tiếng Anh trước khi vào chương trình học chính thức. Dựa vào kết quả bài kiểm tra đánh giá trình độ tiếng Anh, sinh viên sẽ được xếp vào lớp tương ứng. Ngoài ra sinh viên nên nâng cao tiếng Anh của mình bằng các lớp học ngoài giờ và tập luyện tại nhà."
+        },
+        {
+          "question": "Các loại học bổng của Trường và điều kiện nhận là gì?",
+          "answer": "Trường Đại học Quốc tế, ĐHQG TPHCM bao gồm các loại học bổng như sau:\n - Học bổng tuyển sinh: Đây là loại học bổng sẽ được xét duyệt khi sinh viên nộp đơn vào trường, số suất học bổng là 8% số sinh viên theo chỉ tiêu từng ngành. Bao gồm học bổng toàn phần và học bổng bán phần. Bạn vui lòng truy cập vào đường link https://tuyensinh.hcmiu.edu.vn/tuyen-sinh/hoc-bong-danh-cho-sinh-vien-truong-dh-quoc-te/ để xem chi tiết điều kiện xét tuyển học bổng theo từng phương thức và từng ngành. Để duy trì học bổng tuyển sinh, bạn cần phải đạt điểm trung bình các môn từ 50 điểm trở lên và điểm trung bình học kỳ phải từ 70/100 trở lên.\n - Học bổng khuyến khích học tập: Sinh viên được xét Học bổng khuyến khích học tập dựa trên kết quả học tập mỗi học kỳ, số suất học bổng là 40 suất cho các học kỳ chính (15tr đồng/suất) và 20 suất cho học kỳ hè (7.5tr đồng/suất). Để được xét học bổng, sinh viên cần phải hoàn tất chương trình tiếng Anh AE1 tính đến học kỳ xem xét học bổng, không có môn học có điểm dưới 50 kể cả môn giáo dục thể chất và giáo dục quốc phòng, điểm trung bình học kỳ trên 70, đạt số tín chỉ đăng ký tối thiểu bao gồm 14 tín chỉ trong học kỳ chính hoặc 6 tín chỉ trong học kỳ hè và số suất học bổng sẽ được cấp theo thứ tự từ cao đến thấp."
+        },
+        {
+          "question": "Trường có yêu cầu gì về các chứng chỉ Tiếng Anh khi ra trường?",
+          "answer": "Các yêu cầu về chuẩn trình độ tiếng Anh đầu ra cho các chương trình đào tạo Bậc Đại học do Trường Đại học Quốc tế cấp bằng như sau:\n - IELTS Academic: 5.5 \n - TOEFL iBT: 61 \n - TOEIC: 600 (Listening + Reading), 270 (Speaking + Writing) \n - Cambridge Exam: First FCE \n - BEC: Business Vantage \n - BULATS: 60\n Ngoài ra, còn một số yêu cầu về chứng chỉ tiếng Anh để làm luận văn và xét tốt nghiệp:\n - Từ năm học 2020-2021, sinh viên chỉ cần nộp chứng chỉ tiếng Anh 01 (một) lần (tại bất kì thời điểm nào trong suốt quá trình học 4 năm) để được công nhận đủ chuẩn tiếng Anh làm luận văn tốt nghiệp và xét tốt nghiệp.\n - Tại thời điểm nộp, chứng chỉ tiếng Anh phải còn hạn (02 năm kể từ ngày đạt chứng chỉ).\n - Sinh viên phải được công nhận đạt chuẩn tiếng Anh 2 tháng trước thời điểm đăng ký luận văn tốt nghiệp."
+        },
+        {
+          "question": "Sinh viên cần hoàn thành tối thiểu bao nhiêu tín chỉ để tốt nghiệp?",
+          "answer": ""
+        }
+      ]
     }
   ]
 }

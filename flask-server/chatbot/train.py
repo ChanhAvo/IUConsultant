@@ -6,9 +6,9 @@ from torch.utils.data import Dataset, DataLoader
 from nltk_utils import bag_of_words, stem, vietnamese_tokenizer
 from model import NeuralNet
 
-with open('flask-server/resources/Intents.json', 'r') as f:
+with open('../resources/Intents.json', 'r') as f:
   intents = json.load(f)
-with open('flask-server/resources/Questions.json', 'r') as f:
+with open('../resources/Questions.json', 'r') as f:
   questions_data = json.load(f)
 
 
