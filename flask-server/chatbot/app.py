@@ -52,8 +52,8 @@ def predict():
         get_score=get_score,
         bot_name="IU Consultant"
     )
-    
+       # Return the response as JSON
     return jsonify({"answer": response})
-
+ 
 if __name__ == '__main__':
     app.run(debug=True)

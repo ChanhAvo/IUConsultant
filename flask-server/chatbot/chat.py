@@ -81,14 +81,14 @@ def process_chatbot_response(sentence, model, all_words, tags, device, questions
                         match = re.search(pattern, sentence, re.IGNORECASE)
                         if match:
                             response = generate_response(q_a['answer'], match, get_score)
-                            print(f"{bot_name}: {response}")
+                            return response  # Return the response to Flask
                             matched = True
                             break
                 else:
                     match = re.search(q_a['question'], sentence, re.IGNORECASE)
                     if match:
                         response = generate_response(q_a['answer'], match, get_score)
-                        print(f"{bot_name}: {response}")
+                        return response  # Return the response to Flask
                         matched = True
                         break
             if matched:
@@ -97,10 +97,10 @@ def process_chatbot_response(sentence, model, all_words, tags, device, questions
         if not matched:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
-                    print(f"{bot_name}: {random.choice(intent['responses'])}")
-                    break
+                    return random.choice(intent['responses'])  # Return matched response
     else:
-        print(f"{bot_name}: Mình chưa hiểu ý của bạn...")
+        return "Mình chưa hiểu ý của bạn..."  # Return fallback response
+
 
 def generate_response(answer_template, match, get_score):
     if "{major}" in answer_template and "{method}" in answer_template:
