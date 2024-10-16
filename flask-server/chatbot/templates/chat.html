@@ -4,15 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IU Consultant</title>
-    
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .msg_cotainer, .msg_cotainer_send {
+            max-width: 80%;
+            padding: 10px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+
+        .msg_cotainer {
+            background-color: #f1f0f0;
+        }
+
+        .msg_cotainer_send {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .img_cont_msg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .user_img_msg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .justify-content-start, .justify-content-end {
+            display: flex;
+        }
+
+        .msg_time_send {
+            display: block;
+            font-size: 0.8rem;
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        .msg_card_body {
+            overflow-y: auto;
+            max-height: 400px;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid h-100">
@@ -44,11 +89,29 @@
             </div>
         </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script>
+        function scrollToBottom() {
+            var chatBody = $("#messageFormeight");
+            chatBody.scrollTop(chatBody[0].scrollHeight);
+        }
+
+        function typeText(element, text, delay = 50) {
+            let i = 0;
+            const typingEffect = setInterval(() => {
+                if (i < text.length) {
+                    element.append(text.charAt(i));
+                    i++;
+                    scrollToBottom(); // Scroll to bottom as the text is typed
+                } else {
+                    clearInterval(typingEffect);
+                    element.removeClass('typing'); // Remove caret blink effect once typing is done
+                }
+            }, delay);
+        }
+
         $(document).ready(function() {
             $("#messageArea").on("submit", function(event) {
                 const date = new Date();
@@ -57,10 +120,12 @@
                 const str_time = hour + ":" + minute;
                 var rawText = $("#text").val();
 
+                // User message layout
                 var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">' + str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/4VZr19w/student-1.png" class="rounded-circle user_img_msg"></div></div>';
                 
                 $("#text").val("");
                 $("#messageFormeight").append(userHtml);
+                scrollToBottom();  // Scroll down after appending user message
 
                 $.ajax({
                     url: "/predict",
@@ -70,10 +135,16 @@
                     }),
                     contentType: "application/json",  // Ensure JSON is being sent
                     success: function(data) {
-                        // Handle success: Update the UI with the bot's response
+                        // Chatbot response layout with image and typing effect
                         var botHtml = '<div class="d-flex justify-content-start mb-4">' +
-                                      '<div class="msg_cotainer">' + data.answer + '</div></div>';
-                        $("#messageFormeight").append(botHtml);
+                                      '<div class="img_cont_msg"><img src="https://i.ibb.co/BVQhZ7q/logo.png" class="rounded-circle user_img_msg"></div>' +
+                                      '<div class="msg_cotainer typing"></div></div>';  // Empty div for typing effect
+                        var $botMessageDiv = $(botHtml);  // Create jQuery element
+                        $("#messageFormeight").append($botMessageDiv);
+                        scrollToBottom();
+
+                        // Typing effect
+                        typeText($botMessageDiv.find('.msg_cotainer'), data.answer);  // Use typeText function for typing animation
                     },
                     error: function(xhr, status, error) {
                         console.error("Error: " + status + " " + error);
