@@ -97,27 +97,19 @@
         },
         {
           "question": "Sinh viên ở xa trường thì nên di chuyển như thế nào đến trường?",
-          "answer": "Đi sớm"
+          "answer": "Tuỳ thuộc vào khoảng cách từ nhà tới trường, sinh viên nên chủ động sắp xếp thời gian để đi sớm, tránh việc bị trễ giờ học."
         },
         {
           "question": "Sinh viên có cần phải làm giấy tờ tạm trú tại trường hay không?",
-          "answer": "Sinh viên BẮT BUỘC làm giấy tờ tạm trú ngay sau khi nhập học tại trường."
+          "answer": "Sinh viên BẮT BUỘC làm giấy tờ tạm trú ngay sau khi nhập học tại trường. Sinh viên có thể hỏi mọi thông tin chi tiết về thủ tục làm giấy tạm trú tại phòng Công tác Sinh viên (O1.105) hoặc gửi mail về địa chỉ oss@hcmiu.edu.vn để được giải đáp."
         },
         {
           "question": "Kí túc xá của trường có ổn không?",
-          "answer": "Có"
+          "answer": "Trường hiện tại không có kí túc xá riêng. Bạn có thể đăng ký ở tại kí túc xá khu A và kí túc xá khu B của Đại học Quốc gia TPHCM. Hai kí túc xá có các loại phòng dành cho 8 người, 6 người, 4 người và 2 người với các mức giá và tiện ích khác nhau. Kí túc xá được đánh giá là hiện đại, an toàn, có cơ sở vật chất tốt và là một trải nghiệm đáng nhớ của thời sinh viên."
         },
         {
           "question": "Nếu ở trọ thì sẽ khuyến khích ở bao nhiêu người?",
           "answer": "Tuỳ thuộc vào kích thước của căn phòng mà sinh viên có thể quyết định ở bao nhiêu người. Số lượng người ở tốt nhất nên là 4 người cho một phòng trọ dành cho những căn trọ có 2 phòng ngủ trở lên."
-        },
-        {
-          "question": "Trường có gần khu ăn uống, chợ, siêu thị hay không?",
-          "answer": "Có"
-        },
-        {
-          "question": "Ở gần trường có khu trọ/ chung cư nào ổn cho sinh viên hay không?",
-          "answer": "Có"
         }
       ]
     },
@@ -178,7 +170,40 @@
         },
         {
           "question": "Sinh viên cần hoàn thành tối thiểu bao nhiêu tín chỉ để tốt nghiệp?",
-          "answer": ""
+          "answer": "Dựa vào các chuyên ngành khác nhau mà sinh viên cần phải hoàn thành từ 135 đến 145 tín chỉ với thời gian là 4 năm học để có thể tốt nghiệp.\n Để biết thêm thông tin chi tiết, bạn vui lòng truy cập vào đường link này https://www.iuoss.com/wp-content/uploads/2018/08/quy-che-hoc-vu-2008.pdf."
+        },
+        {
+          "question": "Mình muốn xin email của thầy cô thì phải tìm ở đâu?",
+          "answer": "Bạn có thể tìm kiếm email của giảng viên của trường thông qua các website của từng Khoa/ Bộ môn:\n- Khoa Quản trị Kinh doanh: http://bs.hcmiu.edu.vn/\n- Khoa Công nghệ Thông tin: http://it.hcmiu.edu.vn/\n- Khoa Điện – Điện tử: http://see.hcmiu.edu.vn/vi/\n- Khoa Công nghệ Sinh học: https://bt.hcmiu.edu.vn\n- Khoa Ngôn ngữ: https://el.hcmiu.edu.vn/\n- Khoa Kỹ thuật và Quản lý Công nghiệp: http://iem.hcmiu.edu.vn\n- Khoa Kỹ thuật và Quản lý Xây dựng: https://cem.hcmiu.edu.vn/\n- Khoa Kỹ thuật Y Sinh: https://bme.hcmiu.edu.vn/\n- Bộ môn Toán: http://math.hcmiu.edu.vn\n- Bộ môn Vật lý: https://physics.hcmiu.edu.vn/\n- Khoa Kỹ thuật Hóa học và Môi trường: http://cee.hcmiu.edu.vn\n- Khoa Kinh tế, Tài chính và Kế toán: http://efa.hcmiu.edu.vn/\n- Bộ môn Công nghệ Thực phẩm: https://foodtech.hcmiu.edu.vn/\nBạn nhấn vào trang web của Khoa/ Bộ môn mà bạn muốn, chọn Falculty/ Nhân sự trong website đó để tìm kiếm thông tin giảng viên bạn cần. Lưu ý rằng một số thông tin giảng viên sẽ không được đăng tải đầy đủ."
+        }
+      ]
+    },
+    {
+      "tag": "Thông tin về trường",
+      "questions_and_answers": [
+        {
+          "question": "Sinh viên sẽ học ở cơ sở nào?",
+          "answer": "Tùy thuộc vào trình độ tiếng Anh mà sinh viên sẽ được sắp xếp vào các cơ sở sau: \n- Sinh viên đang học ở trình độ tiếng Anh từ IE0 đến IE2/IE3 sẽ được học tại Viện môi trường và Tài nguyên TP.HCM, Phường Đông Hòa, Thị xã Dĩ An, tỉnh Bình Dương (gần KTX khu B). \n- Sinh viên đang học ở trình độ tiếng Anh từ AE1 trở lên sẽ được học tại Thư viện Trung tâm ĐHQG-TP.HCM và cơ sở chính tại địa chỉ Khu phố 6, Phường Linh Trung, Thành phố Thủ Đức, Thành phố Hồ Chí Minh."
+        },
+        {
+          "question": "Mã trường của trường là gì?",
+          "answer": "Mã trường của trường Đại học Quốc tế - ĐHQG TPHCM là QSQ."
+        },
+        {
+          "question": "Trường mình có mấy cơ sở?",
+          "answer": "Hiện tại, trường Đại học Quốc tế - ĐHQG TPHCM chỉ có một cơ sở chính tại địa chỉ Khu phố 6, Phường Linh Trung, Thành phố Thủ Đức, Thành phố Hồ Chí Minh. Ngoài những tiết học tại cơ sở chính, sinh viên có thể được sắp xếp để học tại các địa điểm sau: \n- Sinh viên đang học ở trình độ tiếng Anh từ IE0 đến IE2/IE3 sẽ được học tại Viện môi trường và Tài nguyên TP.HCM, Phường Đông Hòa, Thị xã Dĩ An, tỉnh Bình Dương (gần KTX khu B). \n- Sinh viên đang học ở trình độ tiếng Anh từ AE1 trở lên sẽ được học tại Thư viện Trung tâm ĐHQG-TP.HCM."
+        },
+        {
+          "question": "Học phí trung bình trong một năm cho hệ IU là bao nhiêu?",
+          "answer": "Dựa vào trình độ tiếng Anh mà sinh viên đang học hiện tại, mức học phí có thể khác nhau. Đối với chương trình tiếng Anh tăng cường IE sẽ có học phí là 876.120VNĐ/tín chỉ và chương trình tiếng Anh học thuật AE là 550.704VNĐ/tín chỉ. Số học phí sẽ dao động dựa trên tổng số tín chỉ mà sinh viên đăng ký, trong đó mức học phí dành cho các chương trình Đào tạo của Đại học Quốc tế cấp bằng là 1.451.856VNĐ/tín chỉ.\n Các mức học phí khác bao gồm các môn giảng dạy bằng tiếng Việt: 137.676VNĐ/tín chỉ, các môn Giáo dục Thể chất: 125.160VNĐ/tín chỉ và các môn Giáo dục Quốc phòng: 1.350.000VNĐ/sinh viên. Vì vậy, học phí trung bình trong một năm của sinh viên học hệ trong nước là 50.000.000VNĐ. Để biết thêm thông tin chi tiết, sinh viên vui lòng truy cập vào đường link sau https://edusoftweb.hcmiu.edu.vn/Upload/THONG%20BAO%20HP%20HK1%2024-25-%20Dai%20hoc.pdf."
+        },
+        {
+          "question": "Học phí trung bình trong một năm cho hệ Liên kết là bao nhiêu?",
+          "answer": "Dựa vào trình độ tiếng Anh mà sinh viên đang học hiện tại, mức học phí có thể khác nhau. Đối với chương trình tiếng Anh tăng cường IE sẽ có học phí là 876.120VNĐ/tín chỉ và chương trình tiếng Anh học thuật AE là 550.704VNĐ/tín chỉ. Đối với sinh viên học hệ liên kết, mức học phí sẽ được chia theo từng giai đoạn và sẽ đóng theo mức mà trường liên kết yêu cầu. Để biết thêm thông tin chi tiết, sinh viên vui lòng truy cập vào đường link sau https://edusoftweb.hcmiu.edu.vn/Upload/THONG%20BAO%20HP%20HK1%2024-25-%20Dai%20hoc.pdf. "
+        },
+        {
+          "question": "Trường mình có những website thông tin nào?",
+          "answer": "Hiện tại trường có nhiều website khác nhau phụ thuộc vào mục đích tìm kiếm thông tin. Đối với những thông tin chung, thông tin tuyển sinh, học phí, chương trình đào tạo và các hoạt động khác liên quan tới trường, sinh viên có thể truy cập vào trang web chính https://hcmiu.edu.vn/ hoặc trang web của phòng Công tác Sinh viên https://iuoss.com/ để biết thêm chi tiết."
         }
       ]
     }
