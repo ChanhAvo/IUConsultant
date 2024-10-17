@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import torch, json 
 from model import NeuralNet
-from chat import process_chatbot_response
+from chat import process_chatbot_response  # Import chatbot logic here
 from nltk_utils import vietnamese_tokenizer, bag_of_words
 
 app = Flask(__name__)
 
-# Assuming model and other components are initialized here as shown previously
+# Load model and other components globally once
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 FILE = "data.pth"
 data = torch.load(FILE)
@@ -14,6 +14,7 @@ model = NeuralNet(data["input_size"], data["hidden_size"], data["output_size"]).
 model.load_state_dict(data["model_state"])
 model.eval()
 
+# Load intents, questions, and other data
 all_words = data["all_words"]
 tags = data["tags"]
 
@@ -43,6 +44,7 @@ def get_score(major, method):
         return "Không tìm thấy phương thức xét tuyển phù hợp trong method4"
     else:
         return "Không tìm thấy phương thức xét tuyển"
+
 @app.route("/")
 def index_get():
     return render_template("chat.html")
@@ -66,7 +68,7 @@ def predict():
         get_score=get_score,
         bot_name="IU Consultant"
     )
-       # Return the response as JSON
+    # Return the response as JSON
     return jsonify({"answer": response})
  
 if __name__ == '__main__':

@@ -1,37 +1,7 @@
 import random
-import json
-import torch
 import re
-from model import NeuralNet
+import torch
 from nltk_utils import vietnamese_tokenizer, bag_of_words
-
-# Load device
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-# Load intents and questions data
-with open('../resources/Intents.json', 'r') as f:
-    intents = json.load(f)
-with open('../resources/Questions.json', 'r') as f:
-    questions = json.load(f)
-
-# Load the model and its data
-FILE = "data.pth"
-data = torch.load(FILE, weights_only=True)
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data["all_words"]
-tags = data["tags"]
-model_state = data["model_state"]
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
-model.eval()
-
-# Define bot name
-bot_name = "IU Consultant"
-
-# Greeting message
-print("Bắt đầu cuộc trò chuyện. Nếu như bạn chưa muốn bắt đầu, hãy type 'Tôi không muốn trò chuyện' để thoát cuộc trò chuyện")
 
 # Function to generate responses based on chatbot logic
 def generate_response(answer_template, match, get_score):
@@ -91,13 +61,3 @@ def process_chatbot_response(sentence, model, all_words, tags, device, questions
                     return random.choice(intent['responses'])  # Return matched response
     else:
         return "Mình chưa hiểu ý của bạn..."  # Return fallback response if probability is too low
-
-# Main loop to handle conversation
-while True:
-    sentence = input('Bạn: ')
-    if sentence.lower() == "tôi không muốn trò chuyện":
-        print(f"{bot_name}: Tạm biệt bạn! Hẹn gặp lại!")
-        break
-
-    response = process_chatbot_response(sentence, model, all_words, tags, device, questions, intents, get_score, bot_name)
-    print(f"{bot_name}: {response}")
