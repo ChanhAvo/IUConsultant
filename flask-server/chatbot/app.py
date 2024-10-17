@@ -23,12 +23,26 @@ with open('../resources/Intents.json', 'r') as f:
 with open('../resources/Questions.json', 'r') as f:
     questions = json.load(f)
 
+# Function to retrieve scores
 def get_score(major, method):
     with open('../resources/Scores.json', 'r') as f:
-        scores = json.load(f)
-    # Additional logic for score retrieval
-    return scores
+        data = json.load(f)
 
+    method_key = f"method{method}"
+    if major not in data['major']:
+        return f"Không tìm thấy ngành {major}"
+    
+    major_data = data['major'][major]
+
+    if method_key in major_data:
+        return major_data[method_key]
+    elif 'method4' in major_data:
+        for key in major_data['method4']:
+            if method_key in key.lower():
+                return major_data['method4'][key]
+        return "Không tìm thấy phương thức xét tuyển phù hợp trong method4"
+    else:
+        return "Không tìm thấy phương thức xét tuyển"
 @app.route("/")
 def index_get():
     return render_template("chat.html")

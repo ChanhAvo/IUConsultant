@@ -87,21 +87,30 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 for epoch in range(num_epochs):
-  for (words, labels) in train_loader:
-    words = words.to(device) 
-    labels = labels.to(device) 
-    
-    outputs = model(words)
-    loss = criterion(outputs, labels)
-    
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
+    correct = 0
+    total = 0
+    running_loss = 0.0  
+    for (words, labels) in train_loader:
+        words = words.to(device)
+        labels = labels.to(device)
+
+        outputs = model(words)
+        loss = criterion(outputs, labels)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+        _, predicted = torch.max(outputs, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
   
-  if (epoch + 1) % 100 == 0:
-    print(f'epoch {epoch + 1}/ {num_epochs}, loss = {loss.item():.4f}')
+    accuracy = 100 * correct / total
+    print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {running_loss / len(train_loader):.4f}, Accuracy: {accuracy:.2f}%')
     
-print(f'final loss, loss = {loss.item():.4f}') 
+print(f'Final Loss: {loss.item():.4f}')
+
 
 data = {
   "model_state": model.state_dict(),
