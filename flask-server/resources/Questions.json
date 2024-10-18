@@ -206,6 +206,27 @@
           "answer": "Hiện tại trường có nhiều website khác nhau phụ thuộc vào mục đích tìm kiếm thông tin. Đối với những thông tin chung, thông tin tuyển sinh, học phí, chương trình đào tạo và các hoạt động khác liên quan tới trường, sinh viên có thể truy cập vào trang web chính https://hcmiu.edu.vn/ hoặc trang web của phòng Công tác Sinh viên https://iuoss.com/ để biết thêm chi tiết."
         }
       ]
+    },
+    {
+      "tag": "Đời sống sinh viên",
+      "questions_and_answers": [
+        {
+          "question": "Trường có bao nhiêu Câu lạc bộ",
+          "answer": "Hiện tại, trường có hơn 30 Câu lạc bộ, Đoàn khoa và đội nhóm trực thuộc phòng Công tác Sinh viên và Đoàn trường. Một số Câu lạc bộ tiêu biểu có thể kể đến là Team of Office of Student Affairs (TOSA), IU Event Management Club (EMC), Social Work Team (SWT), Guitar Club (GC) và rất nhiều Câu lạc bộ theo các lĩnh vực khác nhau.\n Sinh viên có thể truy cập vào trang web của phòng Công tác Sinh viên theo đường link https://iuoss.com/cac-cau-lac-bo-tai-iu/ hoặc theo dõi các fanpage của trường để biết thêm thông tin chi tiết."
+        },
+        {
+          "question": "Trường tính điểm rèn luyện như thế nào?",
+          "answer": "Điểm rèn luyện là điểm đạt được khi đánh giá về phẩm chất chính trị, đạo đức, lối sống của sinh viên trên năm mặt đánh giá, theo thang điểm 100. Mỗi sinh viên hệ chính quy chương trình trong nước và chương trình liên kết sẽ tự chấm điểm rèn luyện của mình thông qua trang web https://oss.hcmiu.edu.vn/. Sinh viên cần tuân thủ và chấp hành luật của trường, đi học đầy đủ, nghiêm túc và tham gia vào các hoạt động ngoại khoá để được xét điểm rèn luyện đầy đủ."
+        },
+        {
+          "question": "Điểm rèn luyện tối thiểu một sinh viên cần đạt được là bao nhiêu?",
+          "answer": "Để đánh giá và phân loại kết quả rèn luyện của sinh viên theo từng học kỳ, từng năm học và toàn khóa học, trường đã đưa ra những mức điểm rèn luyện như sau: \n-Xuất sắc: Từ 90 đến 100 điểm.\n-Tốt: Từ 80 đến dưới 90 điểm.\n-Khá: Từ 65 đến dưới 80 điểm\n-Trung bình: Từ 50 đến dưới 65 điểm.\n-Yếu: Dưới 50 điểm.\n Sinh viên có kết quả rèn luyện xếp loại từ trung bình (>=50) trở lên là đạt. Về điểm thành phần cụ thể, sinh viên vui lòng truy cập vào trang web sau để biết thêm thông tin chi tiết https://iuoss.com/wp-content/uploads/2018/08/Phu-luc-3-QC-CTSV-12.2022-Signed-3.pdf."
+        },
+        {
+          "question": "Trường có nhà ăn để sinh viên ăn uống và nghỉ trưa hay không?",
+          "answer": "Trường có một nhà ăn bao gồm 8 quán ăn trải đều từ món Á đến món Âu để phục vụ cho nhu cầu ăn uống của sinh viên. Ngoài ra trên tầng 2 và tầng 4 của trường có hai quán bán nước uống và đồ ăn vặt, cùng với không gian rộng rãi có thể giúp cho sinh viên thư giãn và nghỉ ngơi."
+        }
+      ]
     }
   ]
 }
