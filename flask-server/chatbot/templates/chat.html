@@ -98,12 +98,35 @@
             chatBody.scrollTop(chatBody[0].scrollHeight);
         }
 
-        function typeText(element, text, delay = 50) {
+        function typeText(element, text, delay = 45) {
             let i = 0;
+        
+            // Regular expression to detect URLs in the text
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+        
+            // Replace URLs in the text, but leave them as plain text (no <a> tag)
+            text = text.replace(urlRegex, function(url) {
+                // Instead of creating an <a> tag, just leave the raw URL
+                return url;
+            });
+        
+            // Replace new lines with <br>
+            text = text.replace(/\n/g, "<br>");
+        
+            // Use jQuery append() to safely insert HTML with typing effect
             const typingEffect = setInterval(() => {
                 if (i < text.length) {
-                    element.append(text.charAt(i));
-                    i++;
+                    // Check if the character being appended is part of an HTML tag
+                    if (text.charAt(i) === '<') {
+                        // Get the whole HTML tag and append it as HTML, not text
+                        const endTag = text.indexOf('>', i);
+                        element.append(text.substring(i, endTag + 1));
+                        i = endTag + 1;
+                    } else {
+                        // Append single character normally
+                        element.append(text.charAt(i));
+                        i++;
+                    }
                     scrollToBottom(); // Scroll to bottom as the text is typed
                 } else {
                     clearInterval(typingEffect);
@@ -111,7 +134,7 @@
                 }
             }, delay);
         }
-
+        
         $(document).ready(function() {
             $("#messageArea").on("submit", function(event) {
                 const date = new Date();
@@ -119,14 +142,14 @@
                 const minute = date.getMinutes();
                 const str_time = hour + ":" + minute;
                 var rawText = $("#text").val();
-
+        
                 // User message layout
                 var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">' + str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/4VZr19w/student-1.png" class="rounded-circle user_img_msg"></div></div>';
                 
                 $("#text").val("");
                 $("#messageFormeight").append(userHtml);
                 scrollToBottom();  // Scroll down after appending user message
-
+        
                 $.ajax({
                     url: "/predict",
                     type: "POST",
@@ -142,18 +165,18 @@
                         var $botMessageDiv = $(botHtml);  // Create jQuery element
                         $("#messageFormeight").append($botMessageDiv);
                         scrollToBottom();
-
-                        // Typing effect
+        
+                        // Typing effect with the plain URLs as text (not clickable)
                         typeText($botMessageDiv.find('.msg_cotainer'), data.answer);  // Use typeText function for typing animation
                     },
                     error: function(xhr, status, error) {
                         console.error("Error: " + status + " " + error);
                     }
                 });
-
+        
                 event.preventDefault();  // Prevent form submission refresh
             });
-        });
+        });        
     </script>
 </body>
 </html>
